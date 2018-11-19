@@ -6,10 +6,19 @@
   <body>
 
     <script type="text/javascript">
-      var x = prompt("iveskite pirma skaiciu", "");
-      var y = prompt("iveskite antra skaiciu", "");
-      console.log(Number(x)/Number(y));
-      alert(Number(x)/Number(y));
+    var x = prompt("iveskite pirma skaiciu", "");
+    var y = prompt("iveskite antra skaiciu", "");
+    spausdintiDviejuSkaiciuDalyba(x,y);
+
+    function spausdintiDviejuSkaiciuDalyba(x,y){
+    if(isNaN(x) || isNaN(y)){
+      console.log("Iveskite skaiciu");
+      }
+      else{
+        console.log(Number(x)/Number(y));
+        alert(Number(x)/Number(y));
+      }
+    }
     </script>
   </body>
 </html>
