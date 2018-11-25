@@ -5,21 +5,21 @@
     <title></title>
   </head>
   <body>
-    <div id="amzius">
-
-    </div>
     <script type="text/javascript">
       var age = prompt("Iveskite savo amziu");
       if (isNaN(age)){
         document.write("Butina ivesti skaicius");
       }
-      if(age<18){
-        document.getElementById("amzius");
-        alert("uzeiti i svetaine negalite");
-      }
-      else if(age>=18){
-        document.getElementById("amzius");
-        alert("uzeiti i svetaine galite");
+
+      enterToSite(age);
+
+      function enterToSite(age) {
+        if(age<18){
+          alert("uzeiti i svetaine negalite");
+        }
+        else if(age>=18){
+          alert("uzeiti i svetaine galite");
+        }
       }
     </script>
   </body>
