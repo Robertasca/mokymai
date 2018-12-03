@@ -1,4 +1,5 @@
-<?php $cities = ["Berlynas","Roma","Londonas"];
+<?php
+$cities = ["Berlynas","Roma","Londonas"];
 $cities[] = "Tokijas";
 print_r($cities);
 $cities2 = [
@@ -20,7 +21,7 @@ print_r($cities2);
       <li><?php echo $cities[1]; ?></li>
     </ul>
     <ul>
-      <?php echo "Gyventoju skaicius: {$cities2['Tokijas']} mln."?>
+      <?php echo "Gyventoju skaicius: {$cities2['Tokijas']} mln."; ?>
     </ul>
   </body>
 </html>
