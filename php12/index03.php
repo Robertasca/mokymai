@@ -1,5 +1,10 @@
-<?php $x = 10; ?>
-<?php $y = 7; ?>
+<?php
+if(isset($_POST["submit"])){
+  echo ("Vardas: " . $_POST["vardas"] . "<br/>\n");
+  echo ("Pavarde: " . $_POST["pavarde"]);
+  exit();
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,17 +12,10 @@
     <title></title>
   </head>
   <body>
-    <?php
-    $z = $x + $y;
-    echo "$x + $y = $z"."<br>";
-    $z = $x - $y;
-    echo "$x - $y = $z"."<br>";
-    $z = $x * $y;
-    echo "$x * $y = $z"."<br>";
-    $z = $x / $y;
-    echo "$x / $y = $z"."<br>";
-    $z = $x % $y;
-    echo "$x % $y = $z";
-     ?>
+    <form action="<?php $_PHP_SELF; ?>" method="post">
+      Vardas: <input type='text' name="vardas"/>
+      Pavarde: <input type='text' name="pavarde"/>
+      <input type="submit" name="submit" value="submit">
+    </form>
   </body>
 </html>
