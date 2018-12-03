@@ -13,8 +13,8 @@ if(isset($_POST["submit"])){
   </head>
   <body>
     <form action="<?php $_PHP_SELF; ?>" method="post">
-      Vardas: <input type='text' name="vardas"/>
-      Pavarde: <input type='text' name="pavarde"/>
+      Vardas: <input type='text' name="vardas" required/>
+      Pavarde: <input type='text' name="pavarde" required/>
       <input type="submit" name="submit" value="submit">
     </form>
   </body>
