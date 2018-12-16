@@ -1,0 +1,28 @@
+.left, .right{
+  height: 50vh;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 768px){
+
+    .left, .right{
+      height: 100vh;
+
+    }
+
+}
+
+.left{
+  background-color: #F6E7D4;
+
+}
+
+.right{
+  background-color: black;
+}
+
+img {
+width: 100%;
+height: auto;
+}

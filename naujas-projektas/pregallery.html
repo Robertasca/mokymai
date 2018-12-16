@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <title></title>
+    <style media="screen">
+      main {
+          flex: 1 0 auto;
+        }
+        * {
+          box-sizing: border-box;
+        }
+      body {
+          background-color: #f1f1f1;
+          padding: 20px;
+          font-family: Arial;
+          }
+      h1 {
+          font-size: 50px;
+          word-break: break-all;
+          }
+      .main {
+          max-width: 1000px;
+          margin: auto;
+          }
+      .row {
+          margin: 10px -16px;
+          }
+      .row,
+      .row > .column {
+          padding: 8px;
+          }
+      .column {
+          float: left;
+          width: 50%;
+          display: none;
+          position: relative;
+          }
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+          }
+      .content {
+          background-color: white;
+          padding: 10px;
+          }
+      .show {
+          display: block;
+          }
+      .overlay {
+          position: absolute;
+          top: 200px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 20%;
+          width: auto;
+          opacity: 0;
+          transition: .5s ease;
+          }
+
+      .column:hover .overlay {
+          opacity: 1;
+          }
+
+      .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+          }
+    </style>
+  </head>
+  <body>
+    <nav class= "black">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"><img src="images/logo1.jpg"></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class= "right hide-on-med-and-down">
+          <li><a href="index.html">Pagrindinis</a></li>
+          <li><a href="pregallery.html">Galerija</a></li>
+          <li><a href="contacts.php">Kontaktai</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="index2.html">Pagrindinis</a></li>
+      <li><a href="pregallery.html">Galerija</a></li>
+      <li><a href="contacts.php">Kontaktai</a></li>
+    </ul>
+    <div class="main">
+    <div class="row">
+      <div class="column portretai2">
+        <div class="content">
+          <a href="gallery.html"><img src="images/portretai2.jpg" alt="portretai" style="width:100%"></a>
+          <div class="overlay">
+          <div class="text"><b>Portretai</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="column mada">
+        <div class="content">
+        <a href="gallery.html"><img src="images/mada.jpg" alt="mada" style="width:100%"></a>
+        <div class="overlay">
+        <div class="text"><b>Mada</b></div>
+        </div>
+        </div>
+      </div>
+      <div class="column rekl">
+        <div class="content">
+        <a href="gallery.html"><img src="images/reklama.jpg" alt="rekl" style="width:100%"></a>
+        <div class="overlay">
+        <div class="text"><b>Reklama</b></div>
+        </div>
+        </div>
+      </div>
+      <div class="column rengi">
+        <div class="content">
+          <a href="gallery.html"><img src="images/renginiai.jpg" alt="renginiai" style="width:100%"></a>
+          <div class="overlay">
+          <div class="text"><b>Renginiai</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Kontaktai</h5>
+            <address class="">
+              <dl class="">
+                <dl>Tel.:<a href="Tel:+37062249979" style="color: white">+37062249979</a></dl>
+                <dl>El.paštas: <a href="mailto:4fostudio@gmail.com" style="color: white">4fostudio@gmail.com</a></dl>
+                <dl>Adresas: T.Ševčenkos 16, Vilnius</dl>
+              </dl>
+            </address>
+          </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Sekite mus čia:</h5>
+          <ul>
+            <a href="https://www.instagram.com/explore/locations/1145785008787760/4fo-studio"><img src="images/insta.jpg"></a>
+            <a href="https://www.facebook.com/4FOstudio/"><img src="images/facebook.jpg"></a>
+            <a href="http://4fostudio.tumblr.com"><img src="images/tumblr.jpg"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2018 Visos teisės saugomos.
+      <a class="grey-text text-lighten-4 right" href="#!"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+  </script>
+  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
+  </body>
+</html>
