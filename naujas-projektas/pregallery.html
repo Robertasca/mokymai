@@ -6,77 +6,27 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <title></title>
     <style media="screen">
-      main {
-          flex: 1 0 auto;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      body {
-          background-color: #f1f1f1;
-          padding: 20px;
-          font-family: Arial;
-          }
-      h1 {
-          font-size: 50px;
-          word-break: break-all;
-          }
-      .main {
-          max-width: 1000px;
-          margin: auto;
-          }
-      .row {
-          margin: 10px -16px;
-          }
-      .row,
-      .row > .column {
-          padding: 8px;
-          }
-      .column {
-          float: left;
-          width: 50%;
-          display: none;
-          position: relative;
-          }
-      .row:after {
-          content: "";
-          display: table;
-          clear: both;
-          }
-      .content {
-          background-color: white;
-          padding: 10px;
-          }
-      .show {
-          display: block;
-          }
-      .overlay {
-          position: absolute;
-          top: 200px;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 20%;
-          width: auto;
-          opacity: 0;
-          transition: .5s ease;
-          }
-
-      .column:hover .overlay {
-          opacity: 1;
-          }
-
-      .text {
-          color: white;
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-align: center;
-          }
+    body {
+    background-color: #f1f1f1;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 10px;
+    }
+    main {
+    flex: 1 0 auto;
+    }
+    .row {
+    margin: 10px -16px;
+    }
+    .row,
+    .row > .column {
+    padding: 8px;
+    }
+    .content {
+    background-color: white;
+    padding: 10px;
+    }
     </style>
   </head>
   <body>
@@ -96,42 +46,38 @@
       <li><a href="pregallery.html">Galerija</a></li>
       <li><a href="contacts.php">Kontaktai</a></li>
     </ul>
-    <div class="main">
-    <div class="row">
-      <div class="column portretai2">
-        <div class="content">
-          <a href="gallery.html"><img src="images/portretai2.jpg" alt="portretai" style="width:100%"></a>
-          <div class="overlay">
-          <div class="text"><b>Portretai</b></div>
+    <main class="container">
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <div class="box">
+            <div class="content">
+              <a href="gallery.html"><img src="images/portretai2.jpg" alt="portretai" style="width:100%"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="box">
+            <div class="content">
+              <a href="gallery.html"><img src="images/mada.jpg" alt="mada" style="width:100%"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="box">
+            <div class="content">
+              <a href="gallery.html"><img src="images/reklama.jpg" alt="rekl" style="width:100%"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="box">
+            <div class="content">
+              <a href="gallery.html"><img src="images/renginiai.jpg" alt="renginiai" style="width:100%"></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="column mada">
-        <div class="content">
-        <a href="gallery.html"><img src="images/mada.jpg" alt="mada" style="width:100%"></a>
-        <div class="overlay">
-        <div class="text"><b>Mada</b></div>
-        </div>
-        </div>
-      </div>
-      <div class="column rekl">
-        <div class="content">
-        <a href="gallery.html"><img src="images/reklama.jpg" alt="rekl" style="width:100%"></a>
-        <div class="overlay">
-        <div class="text"><b>Reklama</b></div>
-        </div>
-        </div>
-      </div>
-      <div class="column rengi">
-        <div class="content">
-          <a href="gallery.html"><img src="images/renginiai.jpg" alt="renginiai" style="width:100%"></a>
-          <div class="overlay">
-          <div class="text"><b>Renginiai</b></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </main>
   <footer class="page-footer black">
     <div class="container">
       <div class="row">

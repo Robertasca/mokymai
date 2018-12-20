@@ -9,27 +9,18 @@
       main {
           flex: 1 0 auto;
         }
-        * {
-          box-sizing: border-box;
-        }
       body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
           background-color: #f1f1f1;
-          padding: 20px;
-          font-family: Arial;
-          }
-      h1 {
-          font-size: 50px;
-          word-break: break-all;
+          padding: 10px;
           }
       nav{
-            background-color: #F6E7D4;
+          background-color: #F6E7D4;
           }
       footer{
           background-color: #F6E7D4;
-          }
-      .main {
-          max-width: 1000px;
-          margin: auto;
           }
       .row {
           margin: 10px -16px;
@@ -38,48 +29,9 @@
       .row > .column {
           padding: 8px;
           }
-      .column {
-          float: left;
-          width: 50%;
-          display: none;
-          position: relative;
-          }
-      .row:after {
-          content: "";
-          display: table;
-          clear: both;
-          }
       .content {
           background-color: white;
           padding: 10px;
-          }
-      .show {
-          display: block;
-          }
-      .overlay {
-          position: absolute;
-          top: 200px;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 20%;
-          width: auto;
-          opacity: 0;
-          transition: .5s ease;
-          }
-      .column:hover .overlay {
-          opacity: 1;
-          }
-      .text {
-          color: white;
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          text-align: center;
           }
     </style>
   </head>
@@ -100,42 +52,38 @@
       <li><a href="pregallery2.html"><font color="857173">Galerija</font></a></li>
       <li><a href="contacts.php2"><font color="857173">Kontaktai</font></a></li>
     </ul>
-    <div class="main">
-    <div class="row">
-      <div class="column portretai">
-        <div class="content">
-          <a href="gallery.html"><img src="images/portretai.jpg" alt="vestuves" style="width:100%"></a>
-          <div class="overlay">
-          <div class="text"><b>Portretai</b></div>
+    <main class="container">
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <div class="box">
+            <div class="content">
+              <a href="gallery.html"><img src="images/portretai.jpg" alt="vestuves" style="width:100%"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="box">
+            <div class="content">
+              <a href="gallery.html"><img src="images/vaikai.jpg" alt="vaikai" style="width:100%"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="box">
+            <div class="content">
+              <a href="gallery.html"><img src="images/vestuves.jpg" alt="vestuves" style="width:100%"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6">
+          <div class="box">
+            <div class="content">
+              <a href="gallery.html"><img src="images/sventes.jpg" alt="sventes" style="width:100%"></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="column vaikai">
-        <div class="content">
-        <a href="gallery.html"><img src="images/vaikai.jpg" alt="vaikai" style="width:100%"></a>
-        <div class="overlay">
-        <div class="text"><b>Vaikai</b></div>
-        </div>
-        </div>
-      </div>
-      <div class="column vestuves">
-        <div class="content">
-        <a href="gallery.html"><img src="images/vestuves.jpg" alt="vestuves" style="width:100%"></a>
-        <div class="overlay">
-        <div class="text"><b>Vestuvės</b></div>
-        </div>
-        </div>
-      </div>
-      <div class="column sventes">
-        <div class="content">
-          <a href="gallery.html"><img src="images/sventes.jpg" alt="sventes" style="width:100%"></a>
-          <div class="overlay">
-          <div class="text"><b>Šventės</b></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
+    </main>
   <footer class="">
     <div class="container">
       <div class="row">
